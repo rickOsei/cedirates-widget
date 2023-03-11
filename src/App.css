@@ -1,38 +1,81 @@
-.App {
+.widget-card {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+
+  border: 1px solid black;
+  border-radius: 20px;
+  background: #000;
+  color: white;
+  font-family: IBMPlexSans, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.widget-card p {
+  margin: 0;
+}
+
+.widget.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-logo-name {
+  display: flex;
+}
+
+.widget-logo-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(82, 82, 82, 0.44);
+  padding: 2px;
+}
+
+.widget-company-name {
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgb(189, 189, 189);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.widget-fuel-name-price-change {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.widget-fuel-name-price {
+  font-weight: 900;
+  font-size: 13.5px;
+}
+
+.widget-fuel-change-value {
+  font-size: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.widget-fuel-change-value.red {
+  color: rgb(249, 41, 37);
+}
+.widget-fuel-change-value.green {
+  color: rgb(51, 255, 37);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.widget-fuel-change-timestamp {
+  font-size: 11.5px;
+  color: rgba(189, 189, 189, 0.659);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.widget-powered_by {
+  font-size: 11px;
+  padding-top: 15px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.widget-website-link {
+  text-decoration: none;
+  color: #5399d7;
 }
