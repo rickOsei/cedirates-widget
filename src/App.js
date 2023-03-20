@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { BsArrowDown, BsArrowUp } from "react-icons/bs";
-import { RiArrowLeftRightLine } from "react-icons/ri";
+import { BsArrowDown, BsArrowUp, BsDash } from "react-icons/bs";
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -71,7 +70,7 @@ function App() {
       case "increase":
         return <BsArrowUp className="increase" />;
       default:
-        return <RiArrowLeftRightLine />;
+        return <BsDash />;
     }
   };
 
