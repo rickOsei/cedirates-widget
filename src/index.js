@@ -10,6 +10,7 @@ import reportWebVitals from "./reportWebVitals";
 const widgetDiv = ReactDOM.createRoot(
   document.getElementById("widget-container")
 );
+
 widgetDiv.render(
   <React.StrictMode>
     <App />

@@ -40,6 +40,7 @@
   display: flex;
   align-items: center;
   transition: all 0.2s;
+  text-transform: uppercase;
 }
 
 .widget-fuel-name-price-change {
@@ -49,19 +50,24 @@
 }
 
 .widget-fuel-name-price {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 13.5px;
 }
 
+.widget-fuel-price {
+  font-weight: 200;
+}
+
 .widget-fuel-change-value {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 900;
   text-align: center;
 }
 
-.widget-fuel-change-value.red {
+.decrease {
   color: rgb(249, 41, 37);
 }
-.widget-fuel-change-value.green {
+.increase {
   color: rgb(51, 255, 37);
 }
 
