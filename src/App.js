@@ -70,7 +70,7 @@ function App() {
       case "increase":
         return <BsArrowUp className="increase" />;
       default:
-        return <BsDash />;
+        return "";
     }
   };
 
@@ -88,13 +88,12 @@ function App() {
             Petrol:{" "}
             <span className="widget-fuel-price">
               {petrol === 0 ? "-" : petrol}
+              {fuelChangeFunc(petrolInflation)}
             </span>{" "}
           </p>
-          <div className="widget-fuel-change">
-            <p className="widget-fuel-change-value">
-              {fuelChangeFunc(petrolInflation)}
-            </p>
-            <p className="widget-fuel-change-timestamp">{displayDate}</p>
+          <div className="widget-fuel-title">
+            <p className="widget-fuel-title-value">Fuel Prices (GHS/L)</p>
+            <p className="widget-fuel-title-timestamp">{displayDate}</p>
           </div>
         </div>
 
@@ -103,13 +102,12 @@ function App() {
             Diesel:{" "}
             <span className="widget-fuel-price">
               {diesel === 0 ? "-" : diesel}
+              {fuelChangeFunc(dieselInflation)}
             </span>
           </p>
-          <div className="widget-fuel-change">
-            <p className="widget-fuel-change-value">
-              {fuelChangeFunc(dieselInflation)}
-            </p>
-            <p className="widget-fuel-change-timestamp">{displayDate}</p>
+          <div className="widget-fuel-title">
+            <p className="widget-fuel-title-value">Fuel Prices (GHS/L)</p>
+            <p className="widget-fuel-title-timestamp">{displayDate}</p>
           </div>
         </div>
 
@@ -118,13 +116,12 @@ function App() {
             Premium:{" "}
             <span className="widget-fuel-price">
               {premium === 0 ? "-" : premium}
+              {fuelChangeFunc(premiumInflation)}
             </span>
           </p>
-          <div className="widget-fuel-change">
-            <p className="widget-fuel-change-value">
-              {fuelChangeFunc(premiumInflation)}
-            </p>
-            <p className="widget-fuel-change-timestamp">{displayDate}</p>
+          <div className="widget-fuel-title">
+            <p className="widget-fuel-title-value">Fuel Prices (GHS/L)</p>
+            <p className="widget-fuel-title-timestamp">{displayDate}</p>
           </div>
         </div>
         <p className="widget-powered_by">
