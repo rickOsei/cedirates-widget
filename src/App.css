@@ -1,4 +1,100 @@
 .widget-card {
+  width: 200px;
+  height: auto;
+  padding: 15px;
+
+  border: 1px solid rgba(95, 95, 95, 0.489);
+  border-radius: 20px;
+  background: linear-gradient(100deg, rgba(235, 244, 255, 0.153), #f1f6fc);
+  color: rgb(0, 0, 0);
+  font-family: IBMPlexSans, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.widget-card p {
+  margin: 0;
+}
+
+.widget.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.widget-logo-name {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.widget-logo-name img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(183, 182, 182, 0.35);
+  padding: 2px;
+}
+
+.widget-company-name {
+  padding: 0 15px;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgb(64, 63, 63);
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  text-transform: uppercase;
+}
+
+.widget-fuel-name-price-change {
+  display: flex;
+  padding: 15px 0;
+}
+
+.widget-fuel-name-price {
+  font-weight: 500;
+  font-size: 14.5px;
+}
+
+.widget-fuel-price {
+  font-weight: 200;
+}
+
+.widget-fuel-title {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.widget-fuel-title-value {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.decrease {
+  color: rgb(249, 41, 37);
+  position: absolute;
+}
+.increase {
+  color: rgb(51, 255, 37);
+}
+
+.widget-fuel-title-timestamp {
+  font-size: 11.5px;
+  color: rgba(85, 85, 85, 0.859);
+}
+
+.widget-powered_by {
+  font-size: 11px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+.widget-website-link {
+  text-decoration: none;
+  color: #3f9ef2;
+}
+
+/* .widget-card {
   width: 250px;
   height: auto;
   padding: 15px;
@@ -84,4 +180,4 @@
 .widget-website-link {
   text-decoration: none;
   color: #5399d7;
-}
+} */
