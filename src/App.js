@@ -114,7 +114,7 @@ function App() {
           </div>
           <div className="widget-logo-name">
             <img
-              // src={singleStation.company.image}
+              src={singleStation.company.image}
               alt="compnany-logo"
               className="widget-img"
             />
