@@ -18,6 +18,7 @@ function App() {
   ]);
 
   const [singleStation, setSingleStation] = useState({});
+  const [loading, setLoading] = useState(true);
 
   let query = window.location.search;
   const param = new URLSearchParams(query);
@@ -45,7 +46,7 @@ function App() {
 
   const getSingleFuelData = async () => {
     const queryName = query.split("=")[1];
-    console.log(queryName);
+    setLoading(true);
 
     try {
       const { data } = await axios.get(
@@ -53,7 +54,9 @@ function App() {
       );
       console.log(data);
       setSingleStation(data);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   };
@@ -99,6 +102,9 @@ function App() {
   };
 
   if (param.has("station")) {
+    if (loading) {
+      return <h4>Loading...</h4>;
+    }
     return (
       <aside className="widget-card">
         <div className="widget-content">
@@ -108,7 +114,7 @@ function App() {
           </div>
           <div className="widget-logo-name">
             <img
-              src={singleStation.company.image}
+              // src={singleStation.company.image}
               alt="compnany-logo"
               className="widget-img"
             />
